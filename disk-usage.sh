@@ -8,8 +8,8 @@ else
 	exit 101
 fi
 
-top1=$(du $dir  -d 1 2>/dev/null | sort -n -r | head -n 2 | tail -n 1 | cut -f 1)
-disk=$(du $dir  -d 1 2>/dev/null | sort -n -r | head -n 2 | tail -n 1 | cut -f 2)
+disk=$(du $dir  -d 1 2>/dev/null | sort -n -r | head -n 2 | tail -n 1 | cut -f 1)
+top1=$(du $dir  -d 1 2>/dev/null | sort -n -r | head -n 2 | tail -n 1 | cut -f 2)
 
-echo -e "$top1"
-echo -e "$disk"
+echo -e "The heaviest subfolder of $dir is:"
+echo -e "$top1 with disk usage of $disk kB."
